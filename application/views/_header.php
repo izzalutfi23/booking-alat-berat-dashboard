@@ -93,16 +93,16 @@
 					<div class="collapse" id="transaksi">
 						<ul class="nav flex-column sub-menu">
 							<li class="nav-item">
-								<a class="nav-link" href="#">Pending</a>
+								<a class="nav-link" href="<?=base_url('dashboard/transaksi/pending')?>">Pending</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Accepted</a>
+								<a class="nav-link" href="<?=base_url('dashboard/transaksi/accepted')?>">Accepted</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">On Going</a>
+								<a class="nav-link" href="<?=base_url('dashboard/transaksi/ongoing')?>">On Going</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Done</a>
+								<a class="nav-link" href="<?=base_url('dashboard/transaksi/done')?>">Done</a>
 							</li>
 						</ul>
 					</div>

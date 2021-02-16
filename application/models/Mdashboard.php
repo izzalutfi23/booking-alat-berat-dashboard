@@ -63,4 +63,15 @@ class Mdashboard extends CI_Model{
         $this->db->where('id', $id);
         $this->db->delete('alatberat');
     }
+    // End Alat Berat
+
+    // Transaksi
+    public function gettrx($status){
+        $this->db->select('t.id, a.nama AS nama_alat, t.status, t.start_date, t.end_date, t.nama_penyewa, 
+        t.alamat_proyek, t.total');
+        $this->db->where('t.status', $status);
+        $this->db->join('alatberat as a', 'a.id=t.alatberat_id');
+        $query = $this->db->get('transaksi AS t');
+        return $query;
+    }
 }

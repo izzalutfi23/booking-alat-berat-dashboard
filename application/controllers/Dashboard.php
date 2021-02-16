@@ -192,4 +192,18 @@ class Dashboard extends CI_Controller {
         $this->Mdashboard->delalat($id);
         redirect('dashboard/alatberat/'.$url);
     }
+    // End Alat Berat
+
+    // Transaksi
+    public function transaksi($status){
+        $transaksi = $this->Mdashboard->gettrx($status)->result();
+        $data = [
+            'title' => 'Transaksi | Booking Alat Berat',
+            'kat' => $this->kat(),
+            'transaksi' => $transaksi
+        ];
+		$this->load->view('_header', $data);
+        $this->load->view('pages/transaksi');
+        $this->load->view('_footer');
+    }
 }
