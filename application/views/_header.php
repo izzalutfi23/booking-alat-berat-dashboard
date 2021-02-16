@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="<?=base_url('assets/css/demo_1/style.css')?>" />
 	<!-- End layout styles -->
 	<link rel="shortcut icon" href="<?=base_url('assets/images/favicon.png')?>" />
-    <!-- Datatable -->
+	<!-- Datatable -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" />
 </head>
 
@@ -51,14 +51,14 @@
 						<span class="menu-title">Dashboard</span>
 					</a>
 				</li>
-                <li class="nav-item">
+				<li class="nav-item">
 					<a class="nav-link" href="<?=base_url('dashboard/kategori')?>">
 						<i class="mdi mdi-apps menu-icon"></i>
 						<span class="menu-title">Kategori</span>
 					</a>
 				</li>
-                <li class="nav-item">
-					<a class="nav-link" href="pages/icons/mdi.html">
+				<li class="nav-item">
+					<a class="nav-link" href="<?=base_url('dashboard/operator')?>">
 						<i class="mdi  mdi-account menu-icon"></i>
 						<span class="menu-title">Operator</span>
 					</a>
@@ -72,15 +72,14 @@
 					</a>
 					<div class="collapse" id="ui-basic">
 						<ul class="nav flex-column sub-menu">
+							<?php 
+                                foreach($kat as $kategori){
+                            ?>
 							<li class="nav-item">
-								<a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+								<a class="nav-link"
+									href="<?=base_url('dashboard/alatberat/'.$kategori->id)?>"><?=$kategori->nama?></a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-							</li>
+							<?php } ?>
 						</ul>
 					</div>
 				</li>
