@@ -84,21 +84,33 @@
 					</div>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#transaksi" aria-expanded="false"
+						aria-controls="transaksi">
+						<i class="mdi mdi-swap-horizontal menu-icon"></i>
+						<span class="menu-title">Transaksi</span>
+						<i class="menu-arrow"></i>
+					</a>
+					<div class="collapse" id="transaksi">
+						<ul class="nav flex-column sub-menu">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Pending</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Accepted</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">On Going</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Done</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="pages/forms/basic_elements.html">
-						<i class="mdi mdi-format-list-bulleted menu-icon"></i>
-						<span class="menu-title">Forms</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pages/charts/chartjs.html">
-						<i class="mdi mdi-chart-bar menu-icon"></i>
-						<span class="menu-title">Charts</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="pages/tables/basic-table.html">
-						<i class="mdi mdi-table-large menu-icon"></i>
-						<span class="menu-title">Tables</span>
+						<i class="mdi mdi-account menu-icon"></i>
+						<span class="menu-title">User</span>
 					</a>
 				</li>
 			</ul>
