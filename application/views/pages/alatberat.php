@@ -90,6 +90,12 @@
 									<?php
 									$no=1; 
 									foreach($alat as $data){
+									if($data->status==0){
+										$status = '<button class="btn btn-sm btn-success">Tersedia</button>';
+									}
+									else{
+										$status = '<button class="btn btn-sm btn-danger">Disewa</button>';
+									}
 								?>
 									<tr>
 										<td><?=$no++?></td>
@@ -99,7 +105,7 @@
 										<td><img src="<?=$data->foto?>" style="height: 80px; width: 80px;"></td>
 										<td><?=$data->tahun?></td>
 										<td>Rp <?=number_format($data->harga)?></td>
-										<td><?=$data->status?></td>
+										<td><?=$status?></td>
 										<td width="11%">
 											<button class="btn btn-primary btn-sm" data-toggle="modal"
 												data-target="#edit<?=$data->id?>">Edit</button>
