@@ -74,4 +74,35 @@ class Mdashboard extends CI_Model{
         $query = $this->db->get('transaksi AS t');
         return $query;
     }
+
+    public function changetrx($status, $id){
+        $trx = $this->db->get_where('transaksi', ['id'=>$id])->row();
+        if($status=='ongoing'){
+            $this->db->update('alatberat', ['status'=>'1'], ['id'=>$trx->alatberat_id]);
+        }
+        else if($status=='done'){
+            $this->db->update('alatberat', ['status'=>'0'], ['id'=>$trx->alatberat_id]);
+        }
+        $this->db->update('transaksi', ['status'=>$status], ['id'=>$id]);
+    }
+
+    public function deltrx($id){
+        $this->db->where('id', $id);
+        $this->db->delete('transaksi');
+    }
+    // End Transaksi
+
+    // User
+    public function getuser(){
+        return $this->db->get('user');
+    }
+
+    public function inputuser($data){
+        $this->db->insert('user', $data);
+    }
+
+    public function deluser($id){
+        $this->db->where('id', $id);
+        $this->db->delete('user');
+    }
 }

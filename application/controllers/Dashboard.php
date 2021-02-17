@@ -206,4 +206,44 @@ class Dashboard extends CI_Controller {
         $this->load->view('pages/transaksi');
         $this->load->view('_footer');
     }
+
+    public function changestatus($status, $id){
+        $this->Mdashboard->changetrx($status, $id);
+        redirect('dashboard/transaksi/'.$status);
+    }
+
+    public function deltrx($id, $url){
+        $this->Mdashboard->deltrx($id);
+        redirect('dashboard/transaksi/'.$url);
+    }
+    // End Transaksi
+
+    // User
+    public function user(){
+        $user = $this->Mdashboard->getuser()->result();
+        $data = [
+            'title' => 'User | Booking Alat Berat',
+            'kat' => $this->kat(),
+            'user' => $user
+        ];
+		$this->load->view('_header', $data);
+        $this->load->view('pages/user');
+        $this->load->view('_footer');
+    }
+
+    public function user_action(){
+        $data = [
+            'name' => $this->input->post('nama'),
+            'email' => $this->input->post('email'),
+            'alamat' => $this->input->post('alamat'),
+            'password' => md5($this->input->post('password'))
+        ];
+        $this->Mdashboard->inputuser($data);
+        redirect('dashboard/user');
+    }
+
+    public function deluser($id){
+        $this->Mdashboard->deluser($id);
+        redirect('dashboard/user');
+    }
 }

@@ -36,7 +36,7 @@
 										$status = '<button class="btn btn-sm btn-warning">Accepted</button>';
 									}
                                     else if($data->status=='ongoing'){
-                                        $status = '<button class="btn btn-sm btn-primary">On Going</button>';
+                                        $status = '<button class="btn btn-sm btn-secondary">On Going</button>';
                                     }
                                     else if($data->status=='done'){
                                         $status = '<button class="btn btn-sm btn-success">Done</button>';
@@ -55,7 +55,7 @@
 											<button class="btn btn-primary btn-sm" data-toggle="modal"
 												data-target="#edit<?=$data->id?>">Ubah Status</button>
 											<a onclick="return confirm('Data akan dihapus!')"
-												href="<?=base_url('dashboard/delalat/'.$data->id.'/'.$this->uri->segment('3'))?>"><button
+												href="<?=base_url('dashboard/deltrx/'.$data->id.'/'.$this->uri->segment('3'))?>"><button
 													class="btn btn-danger btn-sm">Hapus</button></a>
 										</td>
 									</tr>
@@ -65,25 +65,18 @@
 										<div class="modal-dialog" role="document">
 											<div class="modal-content">
 												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel">Edit Alat Berat</h5>
+													<h5 class="modal-title" id="exampleModalLabel">Ubah Status</h5>
 													<button type="button" class="close" data-dismiss="modal"
 														aria-label="Close">
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
 												<div class="modal-body">
-													<form action="<?=base_url('dashboard/trx_update')?>" method="POST"
-														enctype="multipart/form-data">
-														<div class="form-group">
-															<label>Status</label>
-															<input type="text" name="status" required
-																class="form-control">
-														</div>
-												</div>
-												<div class="modal-footer">
-													<button type="submit" class="btn btn-primary"
-														style="padding: 7px 7px 7px 7px;">Edit</button>
-													</form>
+												<div class="template-demo mb-4 text-center">
+													<a href="<?=base_url('dashboard/changestatus/pending/'.$data->id)?>"><button type="button" class="btn btn-danger"> Pending </button></a>
+													<a href="<?=base_url('dashboard/changestatus/accepted/'.$data->id)?>"><button type="button" class="btn btn-warning"> Accepted </button></a>
+													<a href="<?=base_url('dashboard/changestatus/ongoing/'.$data->id)?>"><button type="button" class="btn btn-secondary"> On Going </button></a>
+													<a href="<?=base_url('dashboard/changestatus/done/'.$data->id)?>"><button type="button" class="btn btn-success"> Done </button></a>
 												</div>
 											</div>
 										</div>
