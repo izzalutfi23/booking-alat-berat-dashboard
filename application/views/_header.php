@@ -25,6 +25,13 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" />
 	<!-- Button -->
 	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css" />
+	<!-- Custom js for this page -->
+	<script src="<?=base_url('assets/js/dashboard.js')?>"></script>
+	<!-- End custom js for this page -->
+	<!-- plugins:js -->
+	<script src="<?=base_url('assets/vendors/js/vendor.bundle.base.js')?>"></script>
+	<script src="<?=base_url('assets/vendors/chart.js/Chart.min.js')?>"></script>
+	<!-- endinject -->
 </head>
 
 <body>

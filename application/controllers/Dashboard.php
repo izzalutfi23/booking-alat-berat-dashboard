@@ -14,9 +14,59 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
+        // Alat berat
+        $allalat = count($this->Mdashboard->allalat()->result());
+        $jlnkecil = count($this->Mdashboard->getalatberat(5)->result());
+        $jlnbesar = count($this->Mdashboard->getalatberat(6)->result());
+        $tambang = count($this->Mdashboard->getalatberat(7)->result());
+
+        // Transaksi;
+        $alltrx = count($this->Mdashboard->alltrx()->result());
+        $pending = count($this->Mdashboard->gettrx('pending')->result());
+        $acc = count($this->Mdashboard->gettrx('accepted')->result());
+        $ongoing = count($this->Mdashboard->gettrx('ongoing')->result());
+        $done = count($this->Mdashboard->gettrx('done')->result());
+
+        // Operator
+        $allop = count($this->Mdashboard->getoperator()->result());
+        $opjlnkecil = count($this->Mdashboard->getop(5)->result());
+        $opjlnbesar = count($this->Mdashboard->getop(6)->result());
+        $optambang = count($this->Mdashboard->getop(7)->result());
+
+        // Kategori
+        $allkat = count($this->Mdashboard->getkategori()->result());
+
+        // User
+        $alluser = count($this->Mdashboard->getuser()->result());
+
+        // Trx terbaru
+        $trx = $this->Mdashboard->gettrxnew()->result();
+
         $data = [
             'title' => 'Home | Booking Alat Berat',
-            'kat' => $this->kat()
+            'kat' => $this->kat(),
+            // Alat berat
+            'allalat' => $allalat,
+            'jlnkecil' => $jlnkecil,
+            'jlnbesar' => $jlnbesar,
+            'tambang' => $tambang,
+            // Transaksi
+            'alltrx' => $alltrx,
+            'pending' => $pending,
+            'acc' => $acc,
+            'ongoing' => $ongoing,
+            'done' => $done,
+            // Operator
+            'allop' => $allop,
+            'opjlnkecil' => $opjlnkecil,
+            'opjlnbesar' => $opjlnbesar,
+            'optambang' => $optambang,
+            // Kategori
+            'allkat' => $allkat,
+            // User
+            'alluser' => $alluser,
+            // 4 Trx terbaru
+            'trx' => $trx
         ];
 		$this->load->view('_header', $data);
         $this->load->view('pages/home');
@@ -34,16 +84,6 @@ class Dashboard extends CI_Controller {
 		$this->load->view('_header', $data);
         $this->load->view('pages/kategori');
         $this->load->view('_footer');
-    }
-
-    public function kategori_action(){
-        $data = [
-            'nama' => $this->input->post('nama'),
-            'created_at' => date('Y-m-d H:i:s'),
-            'updated_at' => date('Y-m-d H:i:s')
-        ];
-        $this->Mdashboard->inputkat($data);
-        redirect('dashboard/kategori');
     }
 
     public function kategori_update(){

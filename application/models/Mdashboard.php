@@ -6,10 +6,6 @@ class Mdashboard extends CI_Model{
         return $this->db->get('kategori');
     }
 
-    public function inputkat($data){
-        $this->db->insert('kategori', $data);
-    }
-
     public function updatekat($data, $id){
         $this->db->update('kategori', $data, ['id'=>$id]);
     }
@@ -26,6 +22,11 @@ class Mdashboard extends CI_Model{
         $this->db->join('kategori AS k', 'k.id=o.kategori_id');
         $query = $this->db->get('operator AS o');
         return $query;
+    }
+
+    public function getop($kat){
+        $this->db->where('kategori_id', $kat);
+        return $this->db->get('operator');
     }
 
     public function inputop($data){
@@ -51,6 +52,15 @@ class Mdashboard extends CI_Model{
         return $query;
     }
 
+    public function allalat(){
+        return $this->db->get('alatberat');
+    }
+
+    public function getalatberat($kat){
+        $this->db->where('kategori_id', $kat);
+        return $this->db->get('alatberat');
+    }
+
     public function inputalat($data){
         $this->db->insert('alatberat', $data);
     }
@@ -73,6 +83,15 @@ class Mdashboard extends CI_Model{
         $this->db->join('alatberat as a', 'a.id=t.alatberat_id');
         $query = $this->db->get('transaksi AS t');
         return $query;
+    }
+
+    public function alltrx(){
+        return $this->db->get('transaksi');
+    }
+
+    public function gettrxnew(){
+        $this->db->limit(4, 0);
+        return $this->db->get('transaksi');
     }
 
     public function changetrx($status, $id){

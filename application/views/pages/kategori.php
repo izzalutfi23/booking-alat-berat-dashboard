@@ -3,40 +3,6 @@
 	<div class="content-wrapper">
 		<div class="page-header">
 			<h3 class="page-title">Data Kategori</h3>
-			<div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
-				<button type="button" data-toggle="modal" data-target="#tambah"
-					class="btn btn-primary mt-2 mt-sm-0 btn-icon-text">
-					<i class="mdi mdi-plus-circle"></i> Kategori</button>
-
-				<!-- Tambah data -->
-				<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">Tambah Kategori</h5>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<form action="<?=base_url('dashboard/kategori_action')?>" method="POST">
-									<div class="form-group">
-										<label>Nama Kategori</label>
-										<input type="text" name="nama" required class="form-control">
-									</div>
-							</div>
-							<div class="modal-footer">
-								<button type="submit" class="btn btn-primary"
-									style="padding: 7px 7px 7px 7px;">Simpan</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- End tambah data -->
-
-			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12 grid-margin stretch-card">
