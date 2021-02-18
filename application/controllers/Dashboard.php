@@ -286,4 +286,18 @@ class Dashboard extends CI_Controller {
         $this->Mdashboard->deluser($id);
         redirect('dashboard/user');
     }
+
+    // Print pdf
+    public function printPDF()
+	{
+        $data = [
+            'text' => "yay berhasil"
+        ];
+		$mpdf = new \Mpdf\Mpdf();
+		$data = $this->load->view('pdf/hasilPrint', $data, TRUE);
+		$mpdf->WriteHTML($data);
+        // $mpdf->SetTitle('Perjanjian');
+		$mpdf->Output('Perjanjian.pdf', 'I');
+        // $this->load->view('pdf/hasilPrint');
+	}
 }

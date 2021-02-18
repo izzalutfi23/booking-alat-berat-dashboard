@@ -52,7 +52,7 @@
 										<td>Rp <?=number_format($data->total)?></td>
 										<td><?=$status?></td>
 										<td width="11%">
-											<a href="<?=base_url('mpdfcontroller/printpdf')?>"><button class="btn btn-secondary btn-sm">Download Perjanjian</button></a>
+											<a href="<?=base_url('dashboard/printpdf')?>"><button class="btn btn-secondary btn-sm">Download Perjanjian</button></a>
 											<button class="btn btn-primary btn-sm" data-toggle="modal"
 												data-target="#edit<?=$data->id?>">Ubah Status</button>
 											<a onclick="return confirm('Data akan dihapus!')"
