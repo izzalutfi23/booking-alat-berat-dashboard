@@ -52,6 +52,7 @@
 										<td>Rp <?=number_format($data->total)?></td>
 										<td><?=$status?></td>
 										<td width="11%">
+											<a href="<?=base_url('mpdfcontroller/printpdf')?>"><button class="btn btn-secondary btn-sm">Download Perjanjian</button></a>
 											<button class="btn btn-primary btn-sm" data-toggle="modal"
 												data-target="#edit<?=$data->id?>">Ubah Status</button>
 											<a onclick="return confirm('Data akan dihapus!')"
@@ -72,17 +73,29 @@
 													</button>
 												</div>
 												<div class="modal-body">
-												<div class="template-demo mb-4 text-center">
-													<a href="<?=base_url('dashboard/changestatus/pending/'.$data->id)?>"><button type="button" class="btn btn-danger"> Pending </button></a>
-													<a href="<?=base_url('dashboard/changestatus/accepted/'.$data->id)?>"><button type="button" class="btn btn-warning"> Accepted </button></a>
-													<a href="<?=base_url('dashboard/changestatus/ongoing/'.$data->id)?>"><button type="button" class="btn btn-secondary"> On Going </button></a>
-													<a href="<?=base_url('dashboard/changestatus/done/'.$data->id)?>"><button type="button" class="btn btn-success"> Done </button></a>
+													<div class="template-demo mb-4 text-center">
+														<a
+															href="<?=base_url('dashboard/changestatus/pending/'.$data->id)?>"><button
+																type="button" class="btn btn-danger"> Pending
+															</button></a>
+														<a
+															href="<?=base_url('dashboard/changestatus/accepted/'.$data->id)?>"><button
+																type="button" class="btn btn-warning"> Accepted
+															</button></a>
+														<a
+															href="<?=base_url('dashboard/changestatus/ongoing/'.$data->id)?>"><button
+																type="button" class="btn btn-secondary"> On Going
+															</button></a>
+														<a
+															href="<?=base_url('dashboard/changestatus/done/'.$data->id)?>"><button
+																type="button" class="btn btn-success"> Done
+															</button></a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<!-- End edit data -->
-									<?php } ?>
+										<!-- End edit data -->
+										<?php } ?>
 								</tbody>
 							</table>
 						</div>
