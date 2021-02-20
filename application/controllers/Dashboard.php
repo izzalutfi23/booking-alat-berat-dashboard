@@ -295,11 +295,11 @@ class Dashboard extends CI_Controller {
         $data = [
             'trx' => $transaksi
         ];
-		// $mpdf = new \Mpdf\Mpdf();
-		// $data = $this->load->view('pdf/hasilPrint', $data, TRUE);
-		// $mpdf->WriteHTML($data);
-        // // $mpdf->SetTitle('Perjanjian');
-		// $mpdf->Output('Perjanjian.pdf', 'I');
-        $this->load->view('pdf/hasilPrint', $data);
+		$mpdf = new \Mpdf\Mpdf();
+		$data = $this->load->view('pdf/hasilPrint', $data, TRUE);
+		$mpdf->WriteHTML($data);
+        // $mpdf->SetTitle('Perjanjian');
+		$mpdf->Output('Perjanjian.pdf', 'I');
+        // $this->load->view('pdf/hasilPrint', $data);
 	}
 }

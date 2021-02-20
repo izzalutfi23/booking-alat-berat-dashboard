@@ -3400,7 +3400,7 @@
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Pasal
-					IV<o:p></o:p></span></span></b></div>
+					III<o:p></o:p></span></span></b></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Biaya
@@ -3447,7 +3447,7 @@
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Pasal
-					VII<o:p></o:p></span></span></b></div>
+					IV<o:p></o:p></span></span></b></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<span style="font-family: &quot;verdana&quot; , sans-serif;"><b style="mso-bidi-font-weight: normal;"><span
 					style="color: black; font-size: 12pt;">Keamanan
@@ -3478,7 +3478,7 @@
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Pasal
-					VIII<o:p></o:p></span></span></b></div>
+					V<o:p></o:p></span></span></b></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Masa
@@ -3500,7 +3500,7 @@
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Pasal
-					IX<o:p></o:p></span></span></b></div>
+					VI<o:p></o:p></span></span></b></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Perselisihan
@@ -3546,7 +3546,7 @@
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Pasal
-					X<o:p></o:p></span></span></b></div>
+					VII<o:p></o:p></span></span></b></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 12pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">Penutup
@@ -3608,11 +3608,6 @@
 									style="font-family: &quot;verdana&quot; , sans-serif;">
 									<o:p></o:p>
 								</span></span></div>
-						<div align="center" class="MsoNormal"
-							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
-							<span style="color: black; font-size: 12pt;"><span
-									style="font-family: &quot;verdana&quot; , sans-serif;"><?=$trx->alamat_proyek?><o:p>
-									</o:p></span></span></div>
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<br /></div>
