@@ -85,6 +85,16 @@ class Mdashboard extends CI_Model{
         return $query;
     }
 
+    public function gettrxpdf($id){
+        $this->db->select('t.id, a.nama AS nama_alat, a.harga AS sewa, u.name AS nama_user, u.alamat AS alamat_user, u.email, t.status, t.start_date, t.end_date, t.nama_penyewa, 
+        t.alamat_proyek, t.total, t.created_at');
+        $this->db->where('t.id', $id);
+        $this->db->join('alatberat AS a', 'a.id=t.alatberat_id');
+        $this->db->join('user AS u', 'u.id=t.user_id');
+        $query = $this->db->get('transaksi AS t');
+        return $query;
+    }
+
     public function alltrx(){
         return $this->db->get('transaksi');
     }

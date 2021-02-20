@@ -32,7 +32,7 @@
 	<link crossorigin='' href='https://www.googletagmanager.com' rel='preconnect dns-prefetch' />
 	<link crossorigin='' href='https://cdn.staticaly.com' rel='preconnect dns-prefetch' />
 	<link crossorigin='' href='https://cdn.jsdelivr.net' rel='preconnect dns-prefetch' />
-	<title>SURAT PERJANJIAN SEWA EXCAVATOR</title>
+	<title>SURAT PERJANJIAN SEWA ALAT</title>
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta content='#01579B' name='theme-color' />
 	<!-- Windows Phone -->
@@ -3073,7 +3073,7 @@
 		style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 		<b style="mso-bidi-font-weight: normal;"><span style="color: black; font-size: 14pt;"><span
 					style="font-family: &quot;verdana&quot; , sans-serif;">SURAT
-					PERJANJIAN SEWA EXCAVATOR <o:p></o:p></span></span></b>
+					PERJANJIAN SEWA <?=strtoupper($trx->nama_alat)?> <o:p></o:p></span></span></b>
 	</div>
 	<div class="MsoNormal"
 		style="line-height: normal; margin-bottom: 6.25pt; text-align: justify; text-justify: inter-ideograph;">
@@ -3100,11 +3100,10 @@
 	<div class="MsoNormal"
 		style="line-height: normal; margin-bottom: 6.25pt; text-align: justify; text-justify: inter-ideograph;">
 		<span style="font-family: &quot;verdana&quot; , sans-serif;"><span style="color: black; font-size: 12pt;">Pada
-				Hari
-			</span><span lang="EN-US" style="color: black; font-size: 12pt;">Minggu </span><span
-				style="color: black; font-size: 12pt;">Tanggal 21 Agustus
-				2017<span style="mso-spacerun: yes;">&nbsp; </span>yang
-				bertanda tanggan di bawah ini :<o:p></o:p></span></span>
+			</span><span lang="EN-US" style="color: black; font-size: 12pt;"><span
+					style="color: black; font-size: 12pt;">Tanggal <?=date('d M Y', strtotime($trx->created_at))?><span
+						style="mso-spacerun: yes;">&nbsp; </span>yang
+					bertanda tangan di bawah ini :<o:p></o:p></span></span>
 	</div>
 	<table border="0" cellpadding="0" cellspacing="0" class="MsoTableGrid"
 		style="border-collapse: collapse; border: none; mso-border-insideh: none; mso-border-insidev: none; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
@@ -3115,11 +3114,6 @@
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
 								style="font-family: &quot;verdana&quot; , sans-serif;">Nama
-								<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Jabatan
 								<o:p></o:p></span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
@@ -3148,38 +3142,30 @@
 						<span style="color: black; font-size: 12pt;"><span
 								style="font-family: &quot;verdana&quot; , sans-serif;">:
 								<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">:
-								<o:p></o:p></span></span></div>
 				</td>
 				<td style="padding: 0cm 5.4pt 0cm 5.4pt; width: 361.45pt;" valign="top" width="602">
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">RIDHA
-								KHALIS<o:p></o:p></span></span></div>
+								style="font-family: &quot;verdana&quot; , sans-serif;">FARIZ IHSAN<o:p>
+								</o:p>
+							</span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Direktur
-								<o:p></o:p></span></span></div>
+								style="font-family: &quot;verdana&quot; , sans-serif;">PT. SURYA BANGUN SARANA<o:p>
+								</o:p>
+							</span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">CV.
-								Akmal Service<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Desa
-								Juli Meunasah Jok Kec. Juli Kab. Bireuen
+								style="font-family: &quot;verdana&quot; , sans-serif;">Jl. Awang (Sebelah kanan sebelum
+								jembatan sungai andai), Kelurahan Surgi Mufti, Kec. Banjarmasin Utara, Kota Banjarmasin 70122
 								<o:p></o:p></span></span></div>
 				</td>
 			</tr>
 		</tbody>
-	</table>
+	</table><br>
 	<div class="MsoNormal"
 		style="line-height: normal; margin-bottom: 6.25pt; text-align: justify; text-justify: inter-ideograph;">
 		<span style="color: black; font-size: 12pt;"><span
@@ -3202,12 +3188,7 @@
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Jabatan
-								<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Perusahaan
+								style="font-family: &quot;verdana&quot; , sans-serif;">Email
 								<o:p></o:p></span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
@@ -3231,52 +3212,27 @@
 						<span style="color: black; font-size: 12pt;"><span
 								style="font-family: &quot;verdana&quot; , sans-serif;">:
 								<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">:
-								<o:p></o:p></span></span></div>
 				</td>
 				<td style="padding: 0cm 5.4pt 0cm 5.4pt; width: 361.45pt;" valign="top" width="602">
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="font-family: &quot;verdana&quot; , sans-serif;"><span
-								style="color: black; font-size: 12pt;">Ramlan
-								Efendi</span><span lang="EN-US" style="color: black; font-size: 12pt;">
+								style="color: black; font-size: 12pt;"><?=strtoupper($trx->nama_user)?></span><span
+								lang="EN-US" style="color: black; font-size: 12pt;">
 								<o:p></o:p>
 							</span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">Ketua
-								KSM<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">KSM
-								Beudoh Beusare<o:p></o:p></span></span>
-					</div>
+								style="font-family: &quot;verdana&quot; , sans-serif;"><?=$trx->email?><o:p></o:p>
+							</span></span></div>
 					<div class="MsoNormal"
 						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
 						<span style="font-family: &quot;verdana&quot; , sans-serif;"><span
-								style="color: black; font-size: 12pt;">Jl.
-								Meunasah Baro</span><span style="color: black; font-size: 12pt;">
-							</span><span style="color: black; font-size: 12pt;">Gampong
-								Juli Tambo Tanjong</span><span lang="EN-US" style="color: black; font-size: 12pt;"> Kec.
-							</span><span style="color: black; font-size: 12pt;">Juli</span><span
-								style="color: black; font-size: 12pt;">
-							</span><span style="color: black; font-size: 12pt;">
-								<o:p></o:p>
-							</span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<span style="font-family: &quot;verdana&quot; , sans-serif;"><span lang="EN-US"
-								style="color: black; font-size: 12pt;">Kab.
-							</span><span style="color: black; font-size: 12pt;">Bireuen
-								<o:p></o:p></span></span></div>
-					<div class="MsoNormal"
-						style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
-						<br /></div>
+								style="color: black; font-size: 12pt;"><?=$trx->alamat_user?></span>
+							<div class="MsoNormal"
+								style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify; text-justify: inter-ideograph;">
+								<br /></div>
 				</td>
 			</tr>
 		</tbody>
@@ -3323,8 +3279,7 @@
 	<div class="MsoListParagraphCxSpLast"
 		style="line-height: normal; margin-bottom: 6.25pt; margin-left: 14.2pt; margin-right: 0cm; margin-top: 0cm; mso-add-space: auto; text-align: justify; text-justify: inter-ideograph;">
 		<br /></div>
-	<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid"
-		style="border-collapse: collapse; border: none; mso-border-alt: solid black .5pt; mso-border-themecolor: text1; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+	<table border="1" cellpadding="0" cellspacing="0">
 		<tbody>
 			<tr style="mso-yfti-firstrow: yes; mso-yfti-irow: 0;">
 				<td style="border: solid black 1.0pt; mso-border-alt: solid black .5pt; mso-border-themecolor: text1; mso-border-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 47.95pt;"
@@ -3374,8 +3329,8 @@
 					<div align="center" class="MsoNormal"
 						style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 						<span lang="EN-US" style="color: black; font-size: 12pt;"><span
-								style="font-family: &quot;verdana&quot; , sans-serif;">HITACHI
-								PC 200 (MOB/DEMOB)<o:p></o:p></span></span>
+								style="font-family: &quot;verdana&quot; , sans-serif;"><?=strtoupper($trx->nama_alat)?>
+								<o:p></o:p></span></span>
 					</div>
 				</td>
 				<td style="border-bottom: solid black 1.0pt; border-left: none; border-right: solid black 1.0pt; border-top: none; mso-border-alt: solid black .5pt; mso-border-bottom-themecolor: text1; mso-border-left-alt: solid black .5pt; mso-border-left-themecolor: text1; mso-border-right-themecolor: text1; mso-border-themecolor: text1; mso-border-top-alt: solid black .5pt; mso-border-top-themecolor: text1; padding: 0cm 5.4pt 0cm 5.4pt; width: 204.8pt;"
@@ -3383,12 +3338,9 @@
 					<div align="center" class="MsoNormal"
 						style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 						<span style="font-family: &quot;verdana&quot; , sans-serif;"><span
-								style="color: black; font-size: 12pt;">3</span><span lang="EN-US"
-								style="color: black; font-size: 12pt;">.</span><span
-								style="color: black; font-size: 12pt;">00</span><span lang="EN-US"
-								style="color: black; font-size: 12pt;">0</span><span
-								style="color: black; font-size: 12pt;">.000,-
-								<o:p></o:p></span></span></div>
+								style="color: black; font-size: 12pt;">Rp <?=number_format($trx->sewa)?></span>
+							<o:p></o:p>
+						</span></span></div>
 				</td>
 			</tr>
 		</tbody>
@@ -3410,13 +3362,7 @@
 		style="line-height: normal; margin-bottom: 6.25pt; margin-left: 14.2pt; margin-right: 0cm; margin-top: 0cm; text-align: justify; text-indent: -14.2pt; text-justify: inter-ideograph;">
 		<span style="font-family: &quot;verdana&quot; , sans-serif;"><span style="color: black; font-size: 12pt;">3.
 				Lokasi Kerja Pihak
-				Kedua </span><span style="font-size: 12pt;">di </span><span lang="EN-US"
-				style="font-size: 12pt;">Gampong </span><span style="font-size: 12pt;">Juli Tambo Tanjong</span><span
-				lang="EN-US" style="font-size: 12pt;"> Kecamatan
-				Juli</span><span lang="EN-US" style="font-size: 12pt;">
-			</span><span lang="EN-US" style="font-size: 12pt;">Kabupaten
-			</span><span style="font-size: 12pt;">Bireuen (24251).<o:p>
-				</o:p></span></span></div>
+				Kedua </span><span style="font-size: 12pt;">di <?=$trx->alamat_proyek?></span></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 		<br /></div>
 	<div align="center" class="MsoNormal" style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
@@ -3624,7 +3570,7 @@
 						<span style="color: black; font-size: 12pt;"><span
 								style="font-family: &quot;verdana&quot; , sans-serif;">Dibuat
 								di<span style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								</span>: Bireuen<o:p></o:p></span></span>
+								</span>: Banjarmasin<o:p></o:p></span></span>
 					</div>
 				</td>
 			</tr>
@@ -3635,7 +3581,7 @@
 						<span style="color: black; font-size: 12pt;"><span
 								style="font-family: &quot;verdana&quot; , sans-serif;">Tanggal<span
 									style="mso-tab-count: 1;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								</span>: 21 Agustus 2017<o:p></o:p>
+								</span>: <?=date('d M Y')?><o:p></o:p>
 							</span></span></div>
 				</td>
 			</tr>
@@ -3659,14 +3605,14 @@
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<span style="color: black; font-size: 12pt;"><span
-									style="font-family: &quot;verdana&quot; , sans-serif;">Kelompok
-									Swadaya Masyarakat <o:p></o:p>
+									style="font-family: &quot;verdana&quot; , sans-serif;">
+									<o:p></o:p>
 								</span></span></div>
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<span style="color: black; font-size: 12pt;"><span
-									style="font-family: &quot;verdana&quot; , sans-serif;">Beudoh
-									Beusare<o:p></o:p></span></span></div>
+									style="font-family: &quot;verdana&quot; , sans-serif;"><?=$trx->alamat_proyek?><o:p>
+									</o:p></span></span></div>
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<br /></div>
@@ -3683,14 +3629,14 @@
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<b style="mso-bidi-font-weight: normal;"><u><span
 										style="color: black; font-size: 12pt;"><span
-											style="font-family: &quot;verdana&quot; , sans-serif;">RAMLAN
-											EFENDI<o:p></o:p>
+											style="font-family: &quot;verdana&quot; , sans-serif;"><?=strtoupper($trx->nama_user)?>
+											<o:p></o:p>
 										</span></span></u></b></div>
 						<div align="center" class="MsoNormal"
-							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+							style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">
 							<span style="font-family: &quot;verdana&quot; , sans-serif;"><span
-									style="color: black; font-size: 12pt;">Ketua
-									Ksm</span><span style="color: black; font-size: 12pt;">
+									style="color: black; font-size: 12pt;">Penyewa</span><span
+									style="color: black; font-size: 12pt;">
 									<o:p></o:p>
 								</span></span></div>
 					</td>
@@ -3704,8 +3650,8 @@
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<span style="color: black; font-size: 12pt;"><span
-									style="font-family: &quot;verdana&quot; , sans-serif;">CV.
-									AKMAL SERVICE<o:p></o:p></span></span>
+									style="font-family: &quot;verdana&quot; , sans-serif;">PT. SURYA BANGUN SARANA<o:p>
+									</o:p></span></span>
 						</div>
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
@@ -3723,8 +3669,8 @@
 							style="line-height: normal; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
 							<b style="mso-bidi-font-weight: normal;"><u><span
 										style="color: black; font-size: 12pt;"><span
-											style="font-family: &quot;verdana&quot; , sans-serif;">RIDHA
-											KHALIS<o:p></o:p>
+											style="font-family: &quot;verdana&quot; , sans-serif;">FARIZ IHSAN<o:p>
+											</o:p>
 										</span></span></u></b></div>
 						<div align="center" class="MsoNormal"
 							style="line-height: normal; margin-bottom: 6.25pt; text-align: center;">

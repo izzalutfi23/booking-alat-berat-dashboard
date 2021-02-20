@@ -288,16 +288,18 @@ class Dashboard extends CI_Controller {
     }
 
     // Print pdf
-    public function printPDF()
+    public function printPDF($id)
 	{
+        $transaksi = $this->Mdashboard->gettrxpdf($id)->row();
+        // print_r($transaksi);
         $data = [
-            'text' => "yay berhasil"
+            'trx' => $transaksi
         ];
-		$mpdf = new \Mpdf\Mpdf();
-		$data = $this->load->view('pdf/hasilPrint', $data, TRUE);
-		$mpdf->WriteHTML($data);
-        // $mpdf->SetTitle('Perjanjian');
-		$mpdf->Output('Perjanjian.pdf', 'I');
-        // $this->load->view('pdf/hasilPrint');
+		// $mpdf = new \Mpdf\Mpdf();
+		// $data = $this->load->view('pdf/hasilPrint', $data, TRUE);
+		// $mpdf->WriteHTML($data);
+        // // $mpdf->SetTitle('Perjanjian');
+		// $mpdf->Output('Perjanjian.pdf', 'I');
+        $this->load->view('pdf/hasilPrint', $data);
 	}
 }

@@ -46,8 +46,7 @@
 							<!--change to offline or busy as needed-->
 						</div>
 						<div class="nav-profile-text d-flex ml-0 mb-3 flex-column">
-							<span class="font-weight-semibold mb-1 mt-2 text-center">Antonio Olson</span>
-							<span class="text-secondary icon-sm text-center">$3499.00</span>
+							<span class="font-weight-semibold mb-1 mt-2 text-center">Fahrizal</span>
 						</div>
 					</a>
 				</li>
