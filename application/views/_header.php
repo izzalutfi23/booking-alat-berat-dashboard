@@ -164,7 +164,7 @@
 							<button class="btn btn-sm btn-danger">Online</button>
 						</li>
 						<li class="nav-item nav-logout d-none d-lg-block">
-							<a class="nav-link" href="#" title="Logout">
+							<a class="nav-link" href="<?=base_url('login/logout')?>" title="Logout">
 								<i class="mdi mdi-logout-variant"></i>
 							</a>
 						</li>

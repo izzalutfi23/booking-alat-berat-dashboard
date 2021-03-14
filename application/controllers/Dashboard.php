@@ -6,6 +6,13 @@ class Dashboard extends CI_Controller {
     function __construct(){
         parent::__construct();
         $this->load->model('Mdashboard');
+
+        if($this->session->userdata('user')){
+            
+        }
+        else{
+            redirect('login');
+        }
     }
 
     function kat(){
