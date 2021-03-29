@@ -190,6 +190,7 @@ class Dashboard extends CI_Controller {
                 'tahun' => $this->input->post('tahun'),
                 'harga' => $this->input->post('harga'),
                 'status' => '0',
+                'jml' => $this->input->post('jml'),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
             ];
@@ -216,6 +217,7 @@ class Dashboard extends CI_Controller {
                 'tahun' => $this->input->post('tahun'),
                 'harga' => $this->input->post('harga'),
                 'status' => $this->input->post('status'),
+                'jml' => $this->input->post('jml'),
                 'updated_at' => date('Y-m-d H:i:s')
             ];
         }
@@ -228,6 +230,7 @@ class Dashboard extends CI_Controller {
                 'tahun' => $this->input->post('tahun'),
                 'harga' => $this->input->post('harga'),
                 'status' => $this->input->post('status'),
+                'jml' => $this->input->post('jml'),
                 'updated_at' => date('Y-m-d H:i:s')
             ];
         }

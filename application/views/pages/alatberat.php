@@ -52,6 +52,10 @@
 										<label>Harga Sewa</label>
 										<input type="number" name="harga" required class="form-control">
 									</div>
+									<div class="form-group">
+										<label>Jumlah</label>
+										<input type="number" name="jml" required class="form-control">
+									</div>
 							</div>
 							<div class="modal-footer">
 								<button type="submit" class="btn btn-primary"
@@ -83,6 +87,7 @@
 										<th>Tahun</th>
 										<th>Harga Sewa</th>
 										<th>Status</th>
+										<th>Jumlah</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -106,6 +111,7 @@
 										<td><?=$data->tahun?></td>
 										<td>Rp <?=number_format($data->harga)?></td>
 										<td><?=$status?></td>
+										<td><?=$data->jml?></td>
 										<td width="11%">
 											<button class="btn btn-primary btn-sm" data-toggle="modal"
 												data-target="#edit<?=$data->id?>">Edit</button>
@@ -164,6 +170,10 @@
 															<label>Harga Sewa</label>
 															<input type="number" value="<?=$data->harga?>" name="harga"
 																required class="form-control">
+														</div>
+														<div class="form-group">
+															<label>Jumlah</label>
+															<input type="number" name="jml" value="<?=$data->jml?>" class="form-control">
 														</div>
 														<div class="form-group">
 															<label>Status</label>

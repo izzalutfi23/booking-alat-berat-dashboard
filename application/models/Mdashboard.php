@@ -45,7 +45,7 @@ class Mdashboard extends CI_Model{
 
     // Alat Berat
     public function getalat($id){
-        $this->db->select('k.id AS id_kat, k.nama AS nama_kategori, a.id, a.nama AS nama_alat, a.deskripsi, a.foto, a.tahun, a.harga, a.status');
+        $this->db->select('k.id AS id_kat, a.jml, k.nama AS nama_kategori, a.id, a.nama AS nama_alat, a.deskripsi, a.foto, a.tahun, a.harga, a.status');
         $this->db->where('k.id', $id);
         $this->db->join('kategori AS k', 'k.id = a.kategori_id');
         $query = $this->db->get('alatberat AS a');
@@ -108,9 +108,11 @@ class Mdashboard extends CI_Model{
         $trx = $this->db->get_where('transaksi', ['id'=>$id])->row();
         if($status=='ongoing'){
             $this->db->update('alatberat', ['status'=>'1'], ['id'=>$trx->alatberat_id]);
+            $this->db->query("UPDATE alatberat SET jml=jml-1 WHERE id='$trx->alatberat_id'");
         }
         else if($status=='done'){
             $this->db->update('alatberat', ['status'=>'0'], ['id'=>$trx->alatberat_id]);
+            $this->db->query("UPDATE alatberat SET jml=jml+1 WHERE id='$trx->alatberat_id'");
         }
         $this->db->update('transaksi', ['status'=>$status], ['id'=>$id]);
     }
