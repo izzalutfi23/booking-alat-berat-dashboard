@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2021 at 05:08 PM
+-- Generation Time: Mar 29, 2021 at 06:03 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -37,6 +37,7 @@ CREATE TABLE `alatberat` (
   `tahun` year(4) NOT NULL,
   `harga` int(10) UNSIGNED NOT NULL,
   `status` enum('0','1') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jml` int(10) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -45,11 +46,11 @@ CREATE TABLE `alatberat` (
 -- Dumping data for table `alatberat`
 --
 
-INSERT INTO `alatberat` (`id`, `kategori_id`, `nama`, `deskripsi`, `foto`, `tahun`, `harga`, `status`, `created_at`, `updated_at`) VALUES
-(1, 5, 'Beco', 'Beco adalah alat berat', 'http://localhost/alatberat/assets/images/alat/aqiqoh.jpg', 2021, 1000000, '0', '2021-02-12 18:00:00', '2021-02-16 10:13:03'),
-(2, 5, 'Selender', 'Selender penghalus jalan', 'http://localhost/alatberat/assets/images/alat/home1.png', 2019, 2000000, '1', '2021-02-12 18:00:00', '2021-02-16 10:23:17'),
-(3, 7, 'Bull Doser', 'Besar Sekali', 'http://localhost/alatberat/assets/images/alat/home2.png', 2020, 3000000, '0', '2021-02-16 09:52:14', '2021-02-16 10:15:03'),
-(4, 6, 'Tracktor', 'Alat Mluku', 'http://localhost/alatberat/assets/images/alat/home1.png', 2021, 1500000, '0', '2021-02-18 09:19:49', '2021-02-18 09:19:49');
+INSERT INTO `alatberat` (`id`, `kategori_id`, `nama`, `deskripsi`, `foto`, `tahun`, `harga`, `status`, `jml`, `created_at`, `updated_at`) VALUES
+(1, 5, 'Beco', 'Beco adalah alat berat', 'http://localhost/alatberat/assets/images/alat/bar.jpg', 2021, 1000000, '1', -1, '2021-02-12 18:00:00', '2021-03-29 10:14:06'),
+(2, 5, 'Selender', 'Selender penghalus jalan', 'http://localhost/alatberat/assets/images/alat/tataboga.jpg', 2019, 2000000, '1', 0, '2021-02-12 18:00:00', '2021-03-29 10:14:20'),
+(3, 7, 'Bull Doser', 'Besar Sekali', 'http://localhost/alatberat/assets/images/alat/home2.png', 2020, 3000000, '0', 0, '2021-02-16 09:52:14', '2021-02-16 10:15:03'),
+(4, 6, 'Tracktor', 'Alat Mluku', 'http://localhost/alatberat/assets/images/alat/home1.png', 2021, 1500000, '0', 0, '2021-02-18 09:19:49', '2021-02-18 09:19:49');
 
 -- --------------------------------------------------------
 
@@ -124,6 +125,7 @@ CREATE TABLE `oauth_access_tokens` (
 --
 
 INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('1a6e6d7fd15f3495077ecca7ae475ddf1061fff64a93cabb0474ebf26be4b7b9bec16b15a4e7058d', 1, 1, 'users', '[]', 0, '2021-03-29 15:34:46', '2021-03-29 15:34:46', '2022-03-29 15:34:46'),
 ('4703293ab320b697823b7018d40247d94873dd0f45e752bee24c4516747a1a49f1973cde0b3218c5', 1, 1, 'users', '[]', 0, '2021-02-18 14:55:03', '2021-02-18 14:55:03', '2022-02-18 14:55:03'),
 ('5779b92dc86eea80cad449294864329bfc535cb45c0374ce3a21da0edfbdfb82224e6c4208f06b13', 1, 1, 'users', '[]', 0, '2021-02-04 16:09:29', '2021-02-04 16:09:29', '2022-02-04 16:09:29'),
 ('a6147b11c58a780bd87b9d7ddc877c38de9d38088f9ae4203a28b3fa5de4cdee8a00eef39b6f657d', 1, 1, 'users', '[]', 0, '2021-02-13 15:46:39', '2021-02-13 15:46:39', '2022-02-13 15:46:39'),
@@ -259,12 +261,15 @@ CREATE TABLE `transaksi` (
 INSERT INTO `transaksi` (`id`, `user_id`, `alatberat_id`, `operator_id`, `status`, `start_date`, `end_date`, `nama_penyewa`, `alamat_proyek`, `total`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, 1, 'accepted', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:23', '2021-02-18 14:55:23'),
 (2, 1, 1, 2, 'done', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:27', '2021-02-18 14:55:27'),
-(3, 1, 1, 3, 'accepted', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:29', '2021-02-18 14:55:29'),
+(3, 1, 1, 3, 'ongoing', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:29', '2021-02-18 14:55:29'),
 (4, 1, 1, 1, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:30', '2021-02-18 14:55:30'),
 (5, 1, 1, 2, 'ongoing', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:32', '2021-02-18 14:55:32'),
 (6, 1, 1, 3, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:45', '2021-02-18 14:55:45'),
 (7, 1, 1, 2, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-18 14:55:47', '2021-02-18 14:55:47'),
-(8, 1, 1, 1, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-19 14:28:00', '2021-02-19 14:28:00');
+(8, 1, 1, 1, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-02-19 14:28:00', '2021-02-19 14:28:00'),
+(9, 1, 1, 1, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-03-29 15:45:00', '2021-03-29 15:45:00'),
+(10, 1, 1, 1, 'pending', '2021-02-10', '2021-02-14', 'Izza Lutfi', 'Kota Rembang, Jawa Tengah', 4000000, '2021-03-29 15:46:10', '2021-03-29 15:46:10'),
+(11, 1, 1, 1, 'ongoing', '2021-02-10', '2021-02-14', 'Ijab Qobul', 'Kota Rembang, Jawa Tengah', 4000000, '2021-03-29 15:47:11', '2021-03-29 15:47:11');
 
 -- --------------------------------------------------------
 
@@ -287,7 +292,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `alamat`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'tes', 'tes@gmail.com', 'tes', '$2y$10$GyJGAFgiIey8wqENT77cXebsbSIZ7GTXolTebjTpD0ikdqA4F0.M.', '2021-02-04 15:49:50', '2021-02-04 16:16:38');
+(1, 'tes', 'tes@gmail.com', 'tes', '$2y$10$GyJGAFgiIey8wqENT77cXebsbSIZ7GTXolTebjTpD0ikdqA4F0.M.', '2021-02-04 15:49:50', '2021-02-04 16:16:38'),
+(2, 'admin', 'admin@gmail.com', 'Jakarta Pusat', '21232f297a57a5a743894a0e4a801fc3', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -371,7 +377,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `alatberat`
 --
 ALTER TABLE `alatberat`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `kategori`
@@ -407,13 +413,13 @@ ALTER TABLE `operator`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
